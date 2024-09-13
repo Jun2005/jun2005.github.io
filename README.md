@@ -1,1 +1,2 @@
-# jun2005.github.io
+# String Art Generator
+Website that creates string art
