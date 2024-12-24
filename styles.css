@@ -152,7 +152,7 @@ input[type="file"]{
 }
 
 input[type="number"]{
-  width: 70px;
+  width: 100px;
   text-align: center;
   color: #212123;
   background-color: #f2f0e5;
@@ -278,6 +278,15 @@ input[type="number"]{
 #restart-btn{
   background-color: #e68284;
   border: 2px solid #bb4240;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /* #region Slider CSS */
