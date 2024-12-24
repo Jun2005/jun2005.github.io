@@ -4,7 +4,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
@@ -12,27 +12,27 @@
   <body>
     <h1 id="title">String Art Generator</h1>
 
-    <button id="details-button">Click me for details</button>
+    <button id="details-button" class="bold">Click me for details</button>
     <div id="details-container">
       <p id="details">
-        <span class="green-text m-text">Number of pins:</span><br>
+        <span class="green-text m-text bold">Number of pins:</span><br>
         The number of points around the circular canvas from which a string/line can start from. 
         The larger the number, the more detailed the final art piece will be. It will also take 
         longer to process the more pins there are.<br>
         <br>
-        <span class="green-text m-text">Number of strings:</span><br>
+        <span class="green-text m-text bold">Number of strings:</span><br>
         The number of lines on the canvas. Start small, you can add more later but you can't 
         remove lines.<br>
         <br>
-        <span class="green-text m-text">String opacity:</span><br>
+        <span class="green-text m-text bold">String opacity:</span><br>
         Adjusts the darkness of each line. Smaller numbers mean it will take more strings to be 
         a well defined image, but the final result can be a lot more detailed.<br>
         <br>
-        <span class="green-text m-text">String thickness:</span><br>
+        <span class="green-text m-text bold">String thickness:</span><br>
         Generally speaking, it's best if this parameter is as small as possible. Too small 
         and the line won't to visible so try and fine tune this parameter.<br>
         <br>
-        <span class="green-text m-text">Tips:</span><br>
+        <span class="green-text m-text bold">Tips:</span><br>
         If the generated art is blurry, try resizing the browser to be as large as 
         possible and refresh the page. This will make the art piece render at a higher resolution.
       </p>
@@ -84,6 +84,7 @@
     </div>
 
     <div id="canvas-container">
+      <div id="canvas-background"></div>
       <canvas id="image" class="art-canvas"></canvas>
       <canvas id="canvas" class="art-canvas"></canvas>
       <canvas id="pins" class="art-canvas"></canvas>

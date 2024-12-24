@@ -40,16 +40,16 @@ const ctx = imgCanvasEl.getContext("2d");
 const pinsCtx = pinsCanvasEl.getContext("2d");
 const exportCtx = exportCanvasEl.getContext("2d");
 const refCtx = refCanvasEl.getContext("2d",{willReadFrequently: true});
-imgCanvasEl.width = innerHeight*devicePixelRatio;
-imgCanvasEl.height = innerHeight*devicePixelRatio;
-pinsCanvasEl.width = innerHeight*devicePixelRatio;
-pinsCanvasEl.height = innerHeight*devicePixelRatio;
-refCanvasEl.width = innerHeight*devicePixelRatio;
-refCanvasEl.height = innerHeight*devicePixelRatio;
-canvasEl.width = innerHeight*devicePixelRatio;
-canvasEl.height = innerHeight*devicePixelRatio;
-exportCanvasEl.width = innerHeight*devicePixelRatio;
-exportCanvasEl.height = innerHeight*devicePixelRatio;
+imgCanvasEl.width = Math.min(innerHeight, innerWidth)*devicePixelRatio;
+imgCanvasEl.height = Math.min(innerHeight, innerWidth)*devicePixelRatio;
+pinsCanvasEl.width = Math.min(innerHeight, innerWidth)*devicePixelRatio;
+pinsCanvasEl.height = Math.min(innerHeight, innerWidth)*devicePixelRatio;
+refCanvasEl.width = Math.min(innerHeight, innerWidth)*devicePixelRatio;
+refCanvasEl.height = Math.min(innerHeight, innerWidth)*devicePixelRatio;
+canvasEl.width = Math.min(innerHeight, innerWidth)*devicePixelRatio;
+canvasEl.height = Math.min(innerHeight, innerWidth)*devicePixelRatio;
+exportCanvasEl.width = Math.min(innerHeight, innerWidth)*devicePixelRatio;
+exportCanvasEl.height = Math.min(innerHeight, innerWidth)*devicePixelRatio;
 //#endregion
 
 //#region SHADER PART
@@ -402,6 +402,7 @@ function onAddClick(){
   resetLoadBar();
   loadBarContainer.style.display = "block";
   additionalSettingsContainer.style.display = "none";
+  menuEl.style.display = "none";
   addNewStringUpdated(currentPinIndex, lastPinIndex, parseInt(additionalStringsInput.value));
 }
 
@@ -540,7 +541,6 @@ let sideLength;
 let srcPosX;
 let srcPosY;
 const img = new Image();
-// detailsBtn.addEventListener("click", ()=>{detailsContainer.classList.toggle("details-closed")})
 detailsBtn.addEventListener("click", detailsToggle);
 generateBtn.addEventListener("click", onGenerateClick);
 addBtn.addEventListener("click", onAddClick);

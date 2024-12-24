@@ -2,15 +2,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Nerko One", 'Segoe UI';
+  font-family: "Basic", 'Segoe UI';
   font-size: 20px;
   color: #212123;
+  /*border: 1px solid black;*/
 }
 
 body{
   background-color: #f2f0e5;
-  padding: 30px;
+  padding: 30px 0;
   user-select: none;
+  background:
+  linear-gradient(63deg, #f2f0e5 23%, transparent 23%) 7px 0,
+  linear-gradient(63deg, transparent 74%, #f2f0e5 78%),
+  linear-gradient(63deg, transparent 34%, #f2f0e5 38%, #f2f0e5 58%, transparent 62%),
+  #e9e7db;
+  background-size: 16px 48px;
 }
 
 #title{
@@ -29,6 +36,10 @@ body{
   font-size: 25px;
 }
 
+.bold{
+  font-weight: bold;
+}
+
 #details-button{
   display: block;
   border: none;
@@ -41,6 +52,7 @@ body{
 #details-container{
   border: 3px solid #8ab060;
   border-radius: 0 0 5px 5px;
+  background-color: #f2f0e5;
   width: 700px;
   margin: 0 auto 20px auto;
   padding: 0 15px;
@@ -55,6 +67,7 @@ body{
 #initial-settings-container{
   border: 3px solid #8ab060;
   border-radius: 5px;
+  background-color: #f2f0e5;
   padding: 15px;
   margin: 0 auto;
   width: 700px;
@@ -157,6 +170,7 @@ input[type="number"]{
   background-color: #c2d368;
   border: 2px solid #8ab060;
   border-radius: 10px;
+  font-weight: bold;
   text-align: center;
   cursor: pointer;
 }
@@ -165,6 +179,7 @@ input[type="number"]{
   display: none;
   border: 3px solid #8ab060;
   border-radius: 5px;
+  background-color: #f2f0e5;
   margin: 0 auto;
   padding: 15px;
   width: 700px;
@@ -193,6 +208,7 @@ input[type="number"]{
 
 #load-bar-container{
   display: none;
+  background-color: #f2f0e5;
   height: 25px;
   width: 700px;
   margin: 0 auto;
@@ -214,17 +230,27 @@ input[type="number"]{
   width: 100%;
 }
 
+#canvas-background{
+  width: min(90vh, 90vw);
+  height: min(90vh, 90vw);
+  position: absolute;
+  left: min(5vh, 5vw);
+  top: min(5vh, 5vw);
+  background-color: #f2f0e5;
+  border-radius: 50%;
+}
+
 #canvas-container{
   display: none;
   position: relative;
-  width: 100vh;
-  height:100vh;
-  margin: 20px auto;
+  width: min(100vh, 100vw);
+  height: min(100vh, 100vw);
+  margin: 0 auto;
 }
 
 .art-canvas{
-  width: 100vh;
-  height: 100vh;
+  width: min(100vh, 100vw);
+  height: min(100vh, 100vw);
   position: absolute;
   left: 0;
   top: 0;
@@ -241,6 +267,7 @@ input[type="number"]{
 #menu{
   border: 3px solid #8ab060;
   border-radius: 5px;
+  background-color: #f2f0e5;
   margin: 0 auto;
   padding: 5px;
   width: 400px;
